@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreTaskRequest;
+use App\Http\Requests\TaskRequest;
 use App\Http\Resources\TaskResource;
 use App\Models\Task;
 
@@ -14,7 +14,7 @@ class TaskController extends Controller
         return TaskResource::collection($tasks);
     }
 
-    public function store(StoreTaskRequest $request)
+    public function store(TaskRequest $request)
     {
         $task = Task::create($request->only('title'));
         if ($request->filled('keyword_ids')) {

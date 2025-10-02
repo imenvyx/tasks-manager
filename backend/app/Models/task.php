@@ -14,6 +14,6 @@ class Task extends Model
 
     public function keywords()
     {
-        return $this->belongsToMany(Keyword::class, 'keyword_task');
+        return $this->belongsToMany(Keyword::class, 'keyword_task')->withTimestamps();
     }
 }

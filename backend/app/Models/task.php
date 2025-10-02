@@ -6,5 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
-    //
+    protected $fillable = ['title', 'is_done'];
+
+    public function keywords()
+    {
+        return $this->belongsToMany(Keyword::class, 'keyword_task');
+    }
 }

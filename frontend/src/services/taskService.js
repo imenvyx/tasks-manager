@@ -11,11 +11,11 @@ export const fetchKeywords = async () => {
 }
 
 export const createTask = async (payload) => {
-  await api.post('tasks', {
-    payload,
-  })
+  const response = await api.post('tasks', payload)
+  return await response.data.data
 }
 
 export const toggleTaskStatus = async (taskId) => {
-  await api.patch(`tasks/${taskId}/toggle`)
+  const response = await api.patch(`tasks/${taskId}/toggle`)
+  return await response.data.data
 }

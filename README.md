@@ -29,51 +29,24 @@ Construida con **Laravel 8+** en el backend y **Vue 3** con `<script setup>` en 
 
 
 ---
+## Requisitos
+- PHP 8.0+, Composer, MySQL/Postgres
+- Node 16+, npm
+
 
 ## ⚡ Instalación y ejecución
+## Backend (Laravel)
+1. Clonar repo y entrar en carpeta `backend/`
+2. Copiar `.env.example` a `.env` y configurar DB
+3. `composer install`
+4. `php artisan key:generate`
+5. `php artisan migrate --seed`
+6. `php artisan serve` (o usar Sail/Docker) — la API estará en `http://127.0.0.1:8000/api/v1`
 
-### Backend (Laravel)
-
-1. Clonar el repositorio y entrar a la carpeta `backend`:
-```bash
-git clone <URL_DEL_REPO>
-cd tasks-manager/backend
-```
-2.Instalar dependencias:
-```bash
-composer install
-```
-3.Configurar el archivo .env con tu base de datos (ejemplo MySQL):
-
-4.Generar clave de aplicación:
-```bash
-php artisan key:generate
-```
-5.Ejecutar migraciones:
-```bash
-php artisan migrate
-```
-6.Levantar el servidor de desarrollo:
-```bash
-php artisan serve
-```
-
-Por defecto corre en http://localhost:8000
-
-###Frontend (Vue 3)
-
-1.Entrar a la carpeta frontend:
-```bash
-cd ../frontend
-```
-2.Instalar dependencias:
-```bash
-npm install
-```
-3.Levantar servidor de desarrollo:
-```bash
-npm run dev
-```
-Por defecto corre en http://localhost:5173
-Asegúrate de que el backend esté corriendo.
+## Frontend (Vue)
+1. Entrar en `frontend/`
+2. Copiar `.env.example` a `.env` y ajustar `VITE_API_BASE` (por ejemplo `http://127.0.0.1:8000/api/v1`)
+3. `npm install`
+4. `npm run dev`
+5. Abrir `http://localhost:5173` (o la URL que dev server brinde)
 

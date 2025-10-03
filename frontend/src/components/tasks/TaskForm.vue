@@ -42,7 +42,7 @@ const handleSubmit = async () => {
 
     <KeywordSelect :keywords="keywords" v-model="selectedKeywords" />
     <div class="mt-2">
-      <button @click="handleSubmit" class="btn btn-primary" :disabled="loading">
+      <button @click="handleSubmit" class="btn btn-primary" :disabled="loading || !newTaskTitle.trim()">
         {{ loading ? 'Saving..' : 'Add Task' }}
       </button>
       <div v-if="error" class="text-danger mt-2">

@@ -50,3 +50,6 @@ Construida con **Laravel 8+** en el backend y **Vue 3** con `<script setup>` en 
 4. `npm run dev`
 5. Abrir `http://localhost:5173` (o la URL que dev server brinde)
 
+<img width="1451" height="848" alt="image" src="https://github.com/user-attachments/assets/4c891b00-da8f-4f0c-b4d3-b3bb2f7bf19d" />
+
+

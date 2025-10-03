@@ -1,11 +1,9 @@
 <script setup>
-import TaskList from '@/components/TaskList.vue'
+import TaskManager from './components/tasks/TaskManager.vue';
 </script>
 
 <template>
-  <div id="app">
-    <TaskList />
-  </div>
+  <TaskManager />
 </template>
 
 <style scoped></style>
